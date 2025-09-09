@@ -1,25 +1,23 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Encriptador {
 
-    public static void procesarFrase(Frase fraseOriginal) {
+    public static Deque<LinkedList<Integer>> procesarFrase(Frase fraseOriginal) {
         String[] fraseDividida = fraseOriginal.getQ().split(" ");
-        char caracter;
         int caracterASCII;
         int imparConsecutivo;
         LinkedList<Integer> listaCaracteres;
+        Deque<LinkedList<Integer>> fraseEncriptada = new ArrayDeque<>();
 
         // Separa cada palabra en caracteres
         // Cada iteracion es una palabra
-        for (int i = 0; i < fraseDividida.length; i++) {
+        for (String s : fraseDividida) {
             listaCaracteres = new LinkedList<>();
             imparConsecutivo = 1;
 
-            for (char caracterPalabra : fraseDividida[i].toCharArray()) {
+            for (char caracterPalabra : s.toCharArray()) {
                 // Convierte el char a ASCII
                 caracterASCII = (int) caracterPalabra;
 
@@ -31,9 +29,11 @@ public class Encriptador {
                 listaCaracteres.add(caracterASCII);
             }
 
-            for (int j = 0; j < listaCaracteres.getLength(); j++) {
+            listaCaracteres.intercambiarReferencias();
 
-            }
+            fraseEncriptada.add(listaCaracteres);
         }
+
+        return fraseEncriptada;
     }
 }
