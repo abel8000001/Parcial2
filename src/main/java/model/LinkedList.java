@@ -1,6 +1,14 @@
 package model;
 
-public class LinkedList<T> {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import util.EficienciaEspacial;
+import util.PerformanceMonitor;
+
+import java.util.Iterator;
+
+public class LinkedList<T> implements Iterable<T> {
+    private static final Logger performanceLogger = LogManager.getLogger("tiempos");
     private Nodo<T> cabeza;
     private int size;
 
@@ -27,7 +35,10 @@ public class LinkedList<T> {
     }
 
     public void intercambiarReferencias() {
+        long start = System.nanoTime();
         if (cabeza == null || cabeza.getReferencia() == null) {
+            long end = System.nanoTime();
+            performanceLogger.info("intercambiarReferencias duration: {} ms", (end - start) / 1_000_000);
             return;
         }
 
@@ -50,6 +61,8 @@ public class LinkedList<T> {
             anterior = actual;
             actual = nextNext;
         }
+        long end = System.nanoTime();
+        performanceLogger.info("Duracion del proceso intercambiarReferencias: {} ns", (end - start));
     }
 
     private int indexOf(Nodo<T> target) {
@@ -63,6 +76,27 @@ public class LinkedList<T> {
             idx++;
         }
         return -1;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new LinkedListIterator();
+    }
+
+    private class LinkedListIterator implements Iterator<T> {
+        private Nodo<T> current = cabeza;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public T next() {
+            T value = current.getValor();
+            current = current.getReferencia();
+            return value;
+        }
     }
 
     @Override
