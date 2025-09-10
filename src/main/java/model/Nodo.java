@@ -1,12 +1,28 @@
 package model;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Nodo<T> {
-    private final T valor;
+    private static final Logger mainLogger = LogManager.getLogger("main");
+
+    private T valor;
     private Nodo<T> referencia;
 
     public Nodo(T valor) {
-        this.valor = valor;
-        this.referencia = null;
+        try {
+            if (valor == null) {
+                throw new IllegalArgumentException("El valor de un nodo no puede ser nulo.");
+            }
+            this.valor = valor;
+            this.referencia = null;
+            mainLogger.info("Nodo creado correctamente con valor: {}", valor);
+        } catch (Exception e) {
+            System.err.println("Error al crear Nodo: " + e.getMessage());
+            mainLogger.error("Error al crear Nodo: {}", e.getMessage());
+            this.valor = null; // fallback
+            this.referencia = null;
+        }
     }
 
     public T getValor() {
@@ -18,6 +34,16 @@ public class Nodo<T> {
     }
 
     public void setReferencia(Nodo<T> referencia) {
-        this.referencia = referencia;
+        try {
+            if (referencia == this) {
+                throw new IllegalArgumentException("Un nodo no puede referenciarse a sí mismo.");
+            }
+            this.referencia = referencia;
+            mainLogger.info("Referencia establecida correctamente en Nodo con valor: {}", valor);
+        } catch (Exception e) {
+            System.err.println("Error en setReferencia: " + e.getMessage());
+            mainLogger.error("Error en setReferencia: {}", e.getMessage());
+            this.referencia = null; // fallback seguro
+        }
     }
 }

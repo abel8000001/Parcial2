@@ -13,42 +13,95 @@ import java.util.List;
 public class Main {
     private static final Logger tiemposLogger = LogManager.getLogger("tiempos");
     private static final Logger performanceLogger = LogManager.getLogger("performance");
-    public static void main(String[] args) throws Exception {
+    private static final Logger mainLogger = LogManager.getLogger("MainLogger");
+
+    public static void main(String[] args) {
+        mainLogger.info("Inicio de la aplicación...");
+
         long mainStart = System.nanoTime();
-
         PerformanceMonitor monitor = new PerformanceMonitor("Programa");
-        monitor.inicio();
 
-        List<Frase> frasesOriginales = ApiManager.consumirApi();
-        System.out.println(EficienciaEspacial.medirPesoObjeto(frasesOriginales));
-        performanceLogger.info("Peso de frasesOriginales: {}", EficienciaEspacial.medirPesoObjeto(frasesOriginales));
+        try {
+            monitor.inicio();
+            mainLogger.info("Se inició el monitor de rendimiento.");
 
-        Deque<LinkedList<Integer>> fraseEncriptada = null;
+            List<Frase> frasesOriginales = null;
+            try {
+                frasesOriginales = ApiManager.consumirApi();
+                mainLogger.info("Se consumió la API y se recibieron {} frases.", 
+                                (frasesOriginales != null ? frasesOriginales.size() : 0));
 
-        for (Frase frase : frasesOriginales) {
-            System.out.println("frase original: " + frase.getQ());
-
-            fraseEncriptada = Encriptador.encriptarFrase(frase);
-
-            System.out.print("frase encriptada: ");
-
-            for (LinkedList<Integer> palabra : fraseEncriptada) {
-                for (Integer caracter : palabra) {
-                    System.out.print(caracter + "-");
+                if (frasesOriginales == null || frasesOriginales.isEmpty()) {
+                    mainLogger.info("La API no devolvió frases válidas, deteniendo ejecución.");
+                    throw new IllegalStateException("La API no devolvió frases válidas.");
                 }
-                System.out.print(" ");
+            } catch (Exception e) {
+                mainLogger.info("Error al consumir la API: {}", e.getMessage());
+                performanceLogger.error("Error al consumir API: ", e);
+                return; // Se detiene la ejecución si no hay datos
             }
 
-            System.out.println("\nfrase desencriptada: " + Encriptador.desencriptarFrase(fraseEncriptada).getQ());
+            try {
+                performanceLogger.info("Peso de frasesOriginales: {}", EficienciaEspacial.medirPesoObjeto(frasesOriginales));
+                mainLogger.info("Se midió el peso de frasesOriginales.");
+            } catch (Exception e) {
+                mainLogger.info("Error al medir peso de frasesOriginales: {}", e.getMessage());
+                performanceLogger.error("Error al medir peso de frasesOriginales: ", e);
+            }
 
-            System.out.println("\nsiguiente frase\n");
+            Deque<LinkedList<Integer>> fraseEncriptada = null;
+
+            for (Frase frase : frasesOriginales) {
+                if (frase == null || frase.getQ() == null) {
+                    performanceLogger.warn("Se encontró una frase nula, se omite.");
+                    mainLogger.info("Frase nula encontrada y omitida.");
+                    continue;
+                }
+
+                try {
+                    System.out.println("frase original: " + frase.getQ());
+                    fraseEncriptada = Encriptador.encriptarFrase(frase);
+
+                    System.out.print("frase encriptada: ");
+                    if (fraseEncriptada != null) {
+                        for (LinkedList<Integer> palabra : fraseEncriptada) {
+                            if (palabra == null) continue;
+                            for (Integer caracter : palabra) {
+                                System.out.print((caracter == null ? "null" : caracter) + "-");
+                            }
+                            System.out.print(" ");
+                        }
+                    }
+
+                    System.out.println("\nfrase desencriptada: " +
+                            Encriptador.desencriptarFrase(fraseEncriptada).getQ());
+
+                    System.out.println("\nsiguiente frase\n");
+                    mainLogger.info("Se procesó la frase: {}", frase.getQ());
+                } catch (Exception e) {
+                    mainLogger.info("Error procesando frase: {}", e.getMessage());
+                    performanceLogger.error("Error procesando frase: " + frase.getQ(), e);
+                }
+            }
+
+            try {
+                performanceLogger.info("Peso de fraseEncriptada: {}", EficienciaEspacial.medirPesoObjeto(fraseEncriptada));
+                mainLogger.info("Se midió el peso de fraseEncriptada.");
+            } catch (Exception e) {
+                mainLogger.info("Error al medir peso de fraseEncriptada: {}", e.getMessage());
+                performanceLogger.error("Error al medir peso de fraseEncriptada: ", e);
+            }
+
+            monitor.finalizado();
+            mainLogger.info("El monitor de rendimiento finalizó.");
+
+        } catch (Exception e) {
+            mainLogger.info("Error inesperado en Main: {}", e.getMessage());
+            tiemposLogger.error("Error inesperado en Main: ", e);
+        } finally {
+            long mainEnd = System.nanoTime();
+            tiemposLogger.info("Duracion del proceso Main: {} ms", (mainEnd - mainStart) / 1_000_000);
+            mainLogger.info("Aplicación finalizada.");
         }
-
-        EficienciaEspacial.medirPesoObjeto(fraseEncriptada);
-        performanceLogger.info("Peso de fraseEncriptada: {}", EficienciaEspacial.medirPesoObjeto(fraseEncriptada));
-
-        monitor.finalizado();
-        long mainEnd = System.nanoTime();
-        tiemposLogger.info("Duracion del proceso Main: {} ms", (mainEnd - mainStart) / 1_000_000);
     }
 }
