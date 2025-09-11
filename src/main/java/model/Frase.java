@@ -26,4 +26,24 @@ public class Frase {
     public String getQ() {
         return q;
     }
+
+    @Override
+    public String toString() {
+        return "Frase{q='" + q + "'}";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Frase)) return false;
+        Frase other = (Frase) obj;
+        return q.equals(other.q);
+    }
+
+    @Override
+    public int hashCode() {
+        return q.hashCode();
+    }
 }
+
+

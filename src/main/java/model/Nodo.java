@@ -46,4 +46,16 @@ public class Nodo<T> {
             this.referencia = null; // fallback seguro
         }
     }
+
+    @Override
+    public String toString() {
+        return "Nodo{valor=" + valor + ", referencia=" + (referencia != null ? referencia.valor : "null") + "}";
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Nodo)) return false;
+        Nodo<?> other = (Nodo<?>) obj;
+        return (valor != null ? valor.equals(other.valor) : other.valor == null);
+    }
 }

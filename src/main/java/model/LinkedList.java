@@ -165,4 +165,33 @@ public class LinkedList<T> implements Iterable<T> {
         }
         return sb.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof LinkedList)) return false;
+
+        LinkedList<?> other = (LinkedList<?>) obj;
+        if (this.size != other.size) return false;
+
+        try {
+            Nodo<T> temp1 = this.cabeza;
+            Nodo<?> temp2 = other.cabeza;
+
+            while (temp1 != null && temp2 != null) {
+                if (temp1.getValor() == null) {
+                    if (temp2.getValor() != null) return false;
+                } else if (!temp1.getValor().equals(temp2.getValor())) {
+                    return false;
+                }
+                temp1 = temp1.getReferencia();
+                temp2 = temp2.getReferencia();
+            }
+        } catch (Exception e) {
+            performanceLogger.error("Error en equals(): ", e);
+            mainLogger.error("Error en equals(): {}", e.getMessage());
+            return false;
+        }
+        return true;
+    }
 }
