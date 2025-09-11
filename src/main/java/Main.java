@@ -22,9 +22,11 @@ public class Main {
         PerformanceMonitor monitor = new PerformanceMonitor("Programa");
 
         try {
+            // Inicia medición de rendimiento
             monitor.inicio();
             mainLogger.info("Se inició el monitor de rendimiento.");
 
+            // --- 1. Consumir API ---
             List<Frase> frasesOriginales = null;
             try {
                 frasesOriginales = ApiManager.consumirApi();
@@ -32,15 +34,15 @@ public class Main {
                                 (frasesOriginales != null ? frasesOriginales.size() : 0));
 
                 if (frasesOriginales == null || frasesOriginales.isEmpty()) {
-                    mainLogger.info("La API no devolvió frases válidas, deteniendo ejecución.");
                     throw new IllegalStateException("La API no devolvió frases válidas.");
                 }
             } catch (Exception e) {
                 mainLogger.info("Error al consumir la API: {}", e.getMessage());
                 performanceLogger.error("Error al consumir API: ", e);
-                return; // Se detiene la ejecución si no hay datos
+                return; // Se detiene si no hay frases
             }
 
+            // --- 2. Medir eficiencia espacial de frases ---
             try {
                 performanceLogger.info("Peso de frasesOriginales: {}", EficienciaEspacial.medirPesoObjeto(frasesOriginales));
                 mainLogger.info("Se midió el peso de frasesOriginales.");
@@ -51,17 +53,21 @@ public class Main {
 
             Deque<LinkedList<Integer>> fraseEncriptada = null;
 
+            // --- 3. Procesar cada frase ---
             for (Frase frase : frasesOriginales) {
                 if (frase == null || frase.getQ() == null) {
                     performanceLogger.warn("Se encontró una frase nula, se omite.");
-                    mainLogger.info("Frase nula encontrada y omitida.");
                     continue;
                 }
 
                 try {
+                    // Mostrar frase original
                     System.out.println("frase original: " + frase.getQ());
+
+                    // Encriptar frase
                     fraseEncriptada = Encriptador.encriptarFrase(frase);
 
+                    // Mostrar frase encriptada
                     System.out.print("frase encriptada: ");
                     if (fraseEncriptada != null) {
                         for (LinkedList<Integer> palabra : fraseEncriptada) {
@@ -73,17 +79,18 @@ public class Main {
                         }
                     }
 
+                    // Desencriptar y mostrar resultado
                     System.out.println("\nfrase desencriptada: " +
                             Encriptador.desencriptarFrase(fraseEncriptada).getQ());
 
                     System.out.println("\nsiguiente frase\n");
-                    mainLogger.info("Se procesó la frase: {}", frase.getQ());
                 } catch (Exception e) {
                     mainLogger.info("Error procesando frase: {}", e.getMessage());
                     performanceLogger.error("Error procesando frase: " + frase.getQ(), e);
                 }
             }
 
+            // --- 4. Medir eficiencia espacial de frase encriptada ---
             try {
                 performanceLogger.info("Peso de fraseEncriptada: {}", EficienciaEspacial.medirPesoObjeto(fraseEncriptada));
                 mainLogger.info("Se midió el peso de fraseEncriptada.");
@@ -92,6 +99,7 @@ public class Main {
                 performanceLogger.error("Error al medir peso de fraseEncriptada: ", e);
             }
 
+            // Finaliza medición de rendimiento
             monitor.finalizado();
             mainLogger.info("El monitor de rendimiento finalizó.");
 
@@ -99,6 +107,7 @@ public class Main {
             mainLogger.info("Error inesperado en Main: {}", e.getMessage());
             tiemposLogger.error("Error inesperado en Main: ", e);
         } finally {
+            // Log de duración total del programa
             long mainEnd = System.nanoTime();
             tiemposLogger.info("Duracion del proceso Main: {} ms", (mainEnd - mainStart) / 1_000_000);
             mainLogger.info("Aplicación finalizada.");

@@ -4,12 +4,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Iterator;
 
+// Implementación personalizada de una lista enlazada genérica
+// Se usa para almacenar los caracteres transformados de cada palabra
+// en el proceso de encriptación/desencriptación
 public class LinkedList<T> implements Iterable<T> {
     private static final Logger performanceLogger = LogManager.getLogger("tiempos");
     private static final Logger mainLogger = LogManager.getLogger("main");
 
-    private Nodo<T> cabeza;
-    private int size;
+    private Nodo<T> cabeza; // Primer nodo de la lista
+    private int size;       // Cantidad de nodos en la lista
 
     public LinkedList() {
         cabeza = null;
@@ -45,7 +48,8 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
-    // Invierte referencias de la lista de a pares
+    // Recorre la lista intercambiando referencias de nodos en pares
+    // Ejemplo: A->B->C->D  se convierte en  B->A->D->C
     public void intercambiarReferencias() {
         long start = System.nanoTime();
         try {
@@ -85,7 +89,7 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
-    // Busca el índice de un nodo en la lista
+    // Busca el índice de un nodo dado (solo para depuración/logs)
     private int indexOf(Nodo<T> target) {
         try {
             Nodo<T> temp = cabeza;
@@ -104,6 +108,7 @@ public class LinkedList<T> implements Iterable<T> {
         return -1;
     }
 
+    // Iterador para recorrer la lista con "for-each"
     @Override
     public Iterator<T> iterator() {
         return new LinkedListIterator();
@@ -134,6 +139,7 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
+    // Representación detallada de la lista: nodos, valores y referencias
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

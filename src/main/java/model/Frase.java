@@ -6,9 +6,11 @@ import org.apache.logging.log4j.Logger;
 public class Frase {
     private static final Logger mainLogger = LogManager.getLogger("main");
 
-    // Frase original de la API
+    // Representa la frase original proveniente de la API
     private String q;
 
+    // Constructor que valida la frase recibida desde la API
+    // Si la frase es nula o vacía, lanza excepción controlada y asigna valor seguro
     public Frase(String q) {
         try {
             if (q == null || q.trim().isEmpty()) {
@@ -23,6 +25,7 @@ public class Frase {
         }
     }
 
+    // Devuelve la frase original
     public String getQ() {
         return q;
     }
@@ -40,10 +43,4 @@ public class Frase {
         return q.equals(other.q);
     }
 
-    @Override
-    public int hashCode() {
-        return q.hashCode();
-    }
 }
-
-

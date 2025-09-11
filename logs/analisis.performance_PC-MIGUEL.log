@@ -2659,3 +2659,640 @@ Addresses are stable after 1 tries.
  - Tiempo de CPU Usado por el Proceso: 4640 ms 
 
 
+2025-09-10 19:07:16 [main] INFO  performance - Peso de frasesOriginales: 
+|====== Layout Interno ======|
+java.util.ArrayList object internals:
+OFF  SZ                 TYPE DESCRIPTION               VALUE
+  0   8                      (object header: mark)     0x0000000000000001 (non-biasable; age: 0)
+  8   4                      (object header: class)    0x000ba5e0
+ 12   4                  int AbstractList.modCount     50
+ 16   4                  int ArrayList.size            50
+ 20   4   java.lang.Object[] ArrayList.elementData     [(object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Instance size: 24 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+|====== Layout con Referencias ======|
+java.util.ArrayList@32c0915ed object externals:
+          ADDRESS       SIZE TYPE                PATH                           VALUE
+        620c44b78         24 java.util.ArrayList                                (object)
+        620c44b90     157056 (something else)    (somewhere else)               (something else)
+        620c6b110         16 model.Frase         .elementData[0]                (object)
+        620c6b120         48 (something else)    (somewhere else)               (something else)
+        620c6b150         24 java.lang.String    .elementData[0].q              (object)
+        620c6b168         56 [B                  .elementData[0].q.value        [73, 116, 32, 105, 115, 110, 39, 116, 32, 119, 104, 97, 116, 32, 121, 111, 117, 32, 100, 111, 44, 32, 98, 117, 116, 32, 104, 111, 119, 32, 121, 111, 117, 32, 100, 111, 32, 105, 116, 46]
+        620c6b1a0       2472 (something else)    (somewhere else)               (something else)
+        620c6bb48         16 model.Frase         .elementData[1]                (object)
+        620c6bb58         48 (something else)    (somewhere else)               (something else)
+        620c6bb88         24 java.lang.String    .elementData[1].q              (object)
+        620c6bba0         72 [B                  .elementData[1].q.value        [87, 104, 101, 110, 32, 121, 111, 117, 32, 119, 105, 110, 44, 32, 115, 97, 121, 32, 110, 111, 116, 104, 105, 110, 103, 44, 32, 119, 104, 101, 110, 32, 121, 111, 117, 32, 108, 111, 115, 101, 32, 115, 97, 121, 32, 108, 101, 115, 115, 46]
+        620c6bbe8        168 (something else)    (somewhere else)               (something else)
+        620c6bc90         16 model.Frase         .elementData[2]                (object)
+        620c6bca0         48 (something else)    (somewhere else)               (something else)
+        620c6bcd0         24 java.lang.String    .elementData[2].q              (object)
+        620c6bce8         96 [B                  .elementData[2].q.value        [68, 111, 32, 119, 104, 97, 116, 32, 121, 111, 117, 32, 102, 101, 101, 108, 32, 105, 110, 32, 121, 111, 117, 114, 32, 104, 101, 97, 114, 116, 32, 116, 111, 32, 98, 101, 32, 114, 105, 103, 104, 116, 32, 45, 32, 102, 111, 114, 32, 121, 111, 117, 39, 108, 108, 32, 98, 101, 32, 99, 114, 105, 116, 105, 99, 105, 122, 101, 100, 32, 97, 110, 121, 119, 97, 121, 46]
+        620c6bd48        168 (something else)    (somewhere else)               (something else)
+        620c6bdf0         16 model.Frase         .elementData[3]                (object)
+        620c6be00         48 (something else)    (somewhere else)               (something else)
+        620c6be30         24 java.lang.String    .elementData[3].q              (object)
+        620c6be48         72 [B                  .elementData[3].q.value        [68, 111, 32, 101, 118, 101, 114, 121, 32, 97, 99, 116, 32, 111, 102, 32, 121, 111, 117, 114, 32, 108, 105, 102, 101, 32, 97, 115, 32, 105, 102, 32, 105, 116, 32, 119, 101, 114, 101, 32, 121, 111, 117, 114, 32, 108, 97, 115, 116, 46]
+        620c6be90        168 (something else)    (somewhere else)               (something else)
+        620c6bf38         16 model.Frase         .elementData[4]                (object)
+        620c6bf48        256 (something else)    (somewhere else)               (something else)
+        620c6c048         24 java.lang.String    .elementData[4].q              (object)
+        620c6c060        112 [B                  .elementData[4].q.value        [84, 104, 114, 111, 117, 103, 104, 32, 115, 101, 108, 102, 108, 101, 115, 115, 32, 115, 101, 114, 118, 105, 99, 101, 44, 32, 121, 111, 117, 32, 119, 105, 108, 108, 32, 97, 108, 119, 97, 121, 115, 32, 98, 101, 32, 102, 114, 117, 105, 116, 102, 117, 108, 32, 97, 110, 100, 32, 102, 105, 110, 100, 32, 116, 104, 101, 32, 102, 117, 108, 102, 105, 108, 108, 109, 101, 110, 116, 32, 111, 102, 32, 121, 111, 117, 114, 32, 100, 101, 115, 105, 114, 101, 115, 46]
+        620c6c0d0        168 (something else)    (somewhere else)               (something else)
+        620c6c178         16 model.Frase         .elementData[5]                (object)
+        620c6c188         48 (something else)    (somewhere else)               (something else)
+        620c6c1b8         24 java.lang.String    .elementData[5].q              (object)
+        620c6c1d0        128 [B                  .elementData[5].q.value        [84, 104, 101, 32, 109, 111, 114, 101, 32, 114, 101, 106, 101, 99, 116, 105, 111, 110, 32, 121, 111, 117, 32, 103, 101, 116, 44, 32, 116, 104, 101, 32, 98, 101, 116, 116, 101, 114, 32, 121, 111, 117, 32, 97, 114, 101, 44, 32, 116, 104, 101, 32, 109, 111, 114, 101, 32, 121, 111, 117, 39, 118, 101, 32, 108, 101, 97, 114, 110, 101, 100, 44, 32, 116, 104, 101, 32, 99, 108, 111, 115, 101, 114, 32, 121, 111, 117, 32, 97, 114, 101, 32, 116, 111, 32, 121, 111, 117, 114, 32, 111, 117, 116, 99, 111, 109, 101, 46]
+        620c6c250        168 (something else)    (somewhere else)               (something else)
+        620c6c2f8         16 model.Frase         .elementData[6]                (object)
+        620c6c308         48 (something else)    (somewhere else)               (something else)
+        620c6c338         24 java.lang.String    .elementData[6].q              (object)
+        620c6c350         64 [B                  .elementData[6].q.value        [77, 117, 99, 104, 32, 108, 101, 97, 114, 110, 105, 110, 103, 32, 100, 111, 101, 115, 32, 110, 111, 116, 32, 116, 101, 97, 99, 104, 32, 117, 110, 100, 101, 114, 115, 116, 97, 110, 100, 105, 110, 103, 46]
+        620c6c390        168 (something else)    (somewhere else)               (something else)
+        620c6c438         16 model.Frase         .elementData[7]                (object)
+        620c6c448         48 (something else)    (somewhere else)               (something else)
+        620c6c478         24 java.lang.String    .elementData[7].q              (object)
+        620c6c490         72 [B                  .elementData[7].q.value        [82, 101, 115, 116, 32, 97, 110, 100, 32, 98, 101, 32, 107, 105, 110, 100, 44, 32, 121, 111, 117, 32, 100, 111, 110, 39, 116, 32, 104, 97, 118, 101, 32, 116, 111, 32, 112, 114, 111, 118, 101, 32, 97, 110, 121, 116, 104, 105, 110, 103, 46]
+        620c6c4d8        168 (something else)    (somewhere else)               (something else)
+        620c6c580         16 model.Frase         .elementData[8]                (object)
+        620c6c590        152 (something else)    (somewhere else)               (something else)
+        620c6c628         24 java.lang.String    .elementData[8].q              (object)
+        620c6c640         80 [B                  .elementData[8].q.value        [75, 101, 101, 112, 32, 97, 119, 97, 121, 32, 102, 114, 111, 109, 32, 112, 101, 111, 112, 108, 101, 32, 119, 104, 111, 32, 116, 114, 121, 32, 116, 111, 32, 98, 101, 108, 105, 116, 116, 108, 101, 32, 121, 111, 117, 114, 32, 97, 109, 98, 105, 116, 105, 111, 110, 115, 46]
+        620c6c690        168 (something else)    (somewhere else)               (something else)
+        620c6c738         16 model.Frase         .elementData[9]                (object)
+        620c6c748         48 (something else)    (somewhere else)               (something else)
+        620c6c778         24 java.lang.String    .elementData[9].q              (object)
+        620c6c790        128 [B                  .elementData[9].q.value        [84, 97, 107, 101, 32, 116, 104, 101, 32, 97, 116, 116, 105, 116, 117, 100, 101, 32, 111, 102, 32, 97, 32, 115, 116, 117, 100, 101, 110, 116, 46, 32, 78, 101, 118, 101, 114, 32, 98, 101, 32, 116, 111, 111, 32, 98, 105, 103, 32, 116, 111, 32, 97, 115, 107, 32, 113, 117, 101, 115, 116, 105, 111, 110, 115, 46, 32, 78, 101, 118, 101, 114, 32, 107, 110, 111, 119, 32, 116, 111, 111, 32, 109, 117, 99, 104, 32, 116, 111, 32, 108, 101, 97, 114, 110, 32, 115, 111, 109, 101, 116, 104, 105, 110, 103, 32, 110, 101, 119, 46]
+        620c6c810        168 (something else)    (somewhere else)               (something else)
+        620c6c8b8         16 model.Frase         .elementData[10]               (object)
+        620c6c8c8         48 (something else)    (somewhere else)               (something else)
+        620c6c8f8         24 java.lang.String    .elementData[10].q             (object)
+        620c6c910         80 [B                  .elementData[10].q.value       [77, 97, 107, 101, 32, 110, 111, 32, 115, 109, 97, 108, 108, 32, 112, 108, 97, 110, 115, 32, 102, 111, 114, 32, 116, 104, 101, 121, 32, 104, 97, 118, 101, 32, 110, 111, 32, 112, 111, 119, 101, 114, 32, 116, 111, 32, 115, 116, 105, 114, 32, 116, 104, 101, 32, 115, 111, 117, 108, 46]
+        620c6c960        248 (something else)    (somewhere else)               (something else)
+        620c6ca58         16 model.Frase         .elementData[11]               (object)
+        620c6ca68         48 (something else)    (somewhere else)               (something else)
+        620c6ca98         24 java.lang.String    .elementData[11].q             (object)
+        620c6cab0        184 [B                  .elementData[11].q.value       [84, 104, 101, 32, 103, 111, 108, 100, 101, 110, 32, 111, 112, 112, 111, 114, 116, 117, 110, 105, 116, 121, 32, 121, 111, 117, 32, 97, 114, 101, 32, 115, 101, 101, 107, 105, 110, 103, 32, 105, 115, 32, 105, 110, 32, 121, 111, 117, 114, 115, 101, 108, 102, 46, 32, 73, 116, 32, 105, 115, 32, 110, 111, 116, 32, 105, 110, 32, 121, 111, 117, 114, 32, 101, 110, 118, 105, 114, 111, 110, 109, 101, 110, 116, 59, 32, 105, 116, 32, 105, 115, 32, 110, 111, 116, 32, 105, 110, 32, 108, 117, 99, 107, 32, 111, 114, 32, 99, 104, 97, 110, 99, 101, 44, 32, 111, 114, 32, 116, 104, 101, 32, 104, 101, 108, 112, 32, 111, 102, 32, 111, 116, 104, 101, 114, 115, 59, 32, 105, 116, 32, 105, 115, 32, 105, 110, 32, 121, 111, 117, 114, 115, 101, 108, 102, 32, 97, 108, 111, 110, 101, 46, 32]
+        620c6cb68        168 (something else)    (somewhere else)               (something else)
+        620c6cc10         16 model.Frase         .elementData[12]               (object)
+        620c6cc20         48 (something else)    (somewhere else)               (something else)
+        620c6cc50         24 java.lang.String    .elementData[12].q             (object)
+        620c6cc68         64 [B                  .elementData[12].q.value       [73, 116, 32, 105, 115, 32, 98, 101, 116, 116, 101, 114, 32, 116, 111, 32, 98, 101, 32, 108, 111, 111, 107, 101, 100, 32, 111, 118, 101, 114, 32, 116, 104, 97, 110, 32, 111, 118, 101, 114, 108, 111, 111, 107, 101, 100, 46]
+        620c6cca8        168 (something else)    (somewhere else)               (something else)
+        620c6cd50         16 model.Frase         .elementData[13]               (object)
+        620c6cd60         48 (something else)    (somewhere else)               (something else)
+        620c6cd90         24 java.lang.String    .elementData[13].q             (object)
+        620c6cda8         72 [B                  .elementData[13].q.value       [72, 111, 112, 101, 32, 109, 101, 97, 110, 115, 32, 104, 111, 112, 105, 110, 103, 32, 119, 104, 101, 110, 32, 101, 118, 101, 114, 121, 116, 104, 105, 110, 103, 32, 115, 101, 101, 109, 115, 32, 104, 111, 112, 101, 108, 101, 115, 115, 46]
+        620c6cdf0        168 (something else)    (somewhere else)               (something else)
+        620c6ce98         16 model.Frase         .elementData[14]               (object)
+        620c6cea8         48 (something else)    (somewhere else)               (something else)
+        620c6ced8         24 java.lang.String    .elementData[14].q             (object)
+        620c6cef0         88 [B                  .elementData[14].q.value       [71, 114, 101, 97, 116, 110, 101, 115, 115, 32, 108, 105, 101, 115, 32, 110, 111, 116, 32, 105, 110, 32, 98, 101, 105, 110, 103, 32, 115, 116, 114, 111, 110, 103, 44, 32, 98, 117, 116, 32, 105, 110, 32, 116, 104, 101, 32, 114, 105, 103, 104, 116, 32, 117, 115, 101, 32, 111, 102, 32, 115, 116, 114, 101, 110, 103, 116, 104, 46]
+        620c6cf48        168 (something else)    (somewhere else)               (something else)
+        620c6cff0         16 model.Frase         .elementData[15]               (object)
+        620c6d000         48 (something else)    (somewhere else)               (something else)
+        620c6d030         24 java.lang.String    .elementData[15].q             (object)
+        620c6d048         56 [B                  .elementData[15].q.value       [65, 32, 110, 101, 101, 100, 108, 101, 32, 105, 115, 32, 110, 111, 116, 32, 115, 104, 97, 114, 112, 32, 97, 116, 32, 98, 111, 116, 104, 32, 101, 110, 100, 115, 46, 32]
+        620c6d080        272 (something else)    (somewhere else)               (something else)
+        620c6d190         16 model.Frase         .elementData[16]               (object)
+        620c6d1a0         48 (something else)    (somewhere else)               (something else)
+        620c6d1d0         24 java.lang.String    .elementData[16].q             (object)
+        620c6d1e8        112 [B                  .elementData[16].q.value       [65, 110, 32, 105, 110, 99, 104, 32, 111, 102, 32, 116, 105, 109, 101, 32, 105, 115, 32, 97, 110, 32, 105, 110, 99, 104, 32, 111, 102, 32, 103, 111, 108, 100, 32, 98, 117, 116, 32, 121, 111, 117, 32, 99, 97, 110, 39, 116, 32, 98, 117, 121, 32, 116, 104, 97, 116, 32, 105, 110, 99, 104, 32, 111, 102, 32, 116, 105, 109, 101, 32, 119, 105, 116, 104, 32, 97, 110, 32, 105, 110, 99, 104, 32, 111, 102, 32, 103, 111, 108, 100, 46]
+        620c6d258        168 (something else)    (somewhere else)               (something else)
+        620c6d300         16 model.Frase         .elementData[17]               (object)
+        620c6d310         48 (something else)    (somewhere else)               (something else)
+        620c6d340         24 java.lang.String    .elementData[17].q             (object)
+        620c6d358         80 [B                  .elementData[17].q.value       [76, 105, 102, 101, 32, 109, 97, 121, 32, 98, 101, 32, 102, 117, 108, 108, 32, 111, 102, 32, 112, 97, 105, 110, 32, 98, 117, 116, 32, 116, 104, 97, 116, 39, 115, 32, 110, 111, 116, 32, 97, 110, 32, 101, 120, 99, 117, 115, 101, 32, 116, 111, 32, 103, 105, 118, 101, 32, 117, 112, 46]
+        620c6d3a8        168 (something else)    (somewhere else)               (something else)
+        620c6d450         16 model.Frase         .elementData[18]               (object)
+        620c6d460         48 (something else)    (somewhere else)               (something else)
+        620c6d490         24 java.lang.String    .elementData[18].q             (object)
+        620c6d4a8        136 [B                  .elementData[18].q.value       [77, 101, 110, 32, 108, 101, 97, 114, 110, 32, 116, 111, 32, 108, 111, 118, 101, 32, 116, 104, 101, 32, 119, 111, 109, 97, 110, 32, 116, 104, 101, 121, 32, 97, 114, 101, 32, 97, 116, 116, 114, 97, 99, 116, 101, 100, 32, 116, 111, 46, 32, 87, 111, 109, 101, 110, 32, 108, 101, 97, 114, 110, 32, 116, 111, 32, 98, 101, 99, 111, 109, 101, 32, 97, 116, 116, 114, 97, 99, 116, 101, 100, 32, 116, 111, 32, 116, 104, 101, 32, 109, 97, 110, 32, 116, 104, 101, 121, 32, 102, 97, 108, 108, 32, 105, 110, 32, 108, 111, 118, 101, 32, 119, 105, 116, 104, 46]
+        620c6d530        168 (something else)    (somewhere else)               (something else)
+        620c6d5d8         16 model.Frase         .elementData[19]               (object)
+        620c6d5e8         48 (something else)    (somewhere else)               (something else)
+        620c6d618         24 java.lang.String    .elementData[19].q             (object)
+        620c6d630         88 [B                  .elementData[19].q.value       [73, 116, 32, 105, 115, 32, 110, 111, 116, 32, 104, 111, 119, 32, 109, 117, 99, 104, 32, 119, 101, 32, 104, 97, 118, 101, 44, 32, 98, 117, 116, 32, 104, 111, 119, 32, 109, 117, 99, 104, 32, 119, 101, 32, 101, 110, 106, 111, 121, 44, 32, 116, 104, 97, 116, 32, 109, 97, 107, 101, 115, 32, 104, 97, 112, 112, 105, 110, 101, 115, 115, 46]
+        620c6d688        168 (something else)    (somewhere else)               (something else)
+        620c6d730         16 model.Frase         .elementData[20]               (object)
+        620c6d740         48 (something else)    (somewhere else)               (something else)
+        620c6d770         24 java.lang.String    .elementData[20].q             (object)
+        620c6d788         80 [B                  .elementData[20].q.value       [84, 111, 32, 97, 114, 114, 105, 118, 101, 32, 97, 116, 32, 116, 104, 101, 32, 115, 105, 109, 112, 108, 101, 115, 116, 32, 116, 114, 117, 116, 104, 32, 114, 101, 113, 117, 105, 114, 101, 115, 32, 121, 101, 97, 114, 115, 32, 111, 102, 32, 99, 111, 110, 116, 101, 109, 112, 108, 97, 116, 105, 111, 110, 46]
+        620c6d7d8        168 (something else)    (somewhere else)               (something else)
+        620c6d880         16 model.Frase         .elementData[21]               (object)
+        620c6d890         48 (something else)    (somewhere else)               (something else)
+        620c6d8c0         24 java.lang.String    .elementData[21].q             (object)
+        620c6d8d8        112 [B                  .elementData[21].q.value       [73, 116, 39, 115, 32, 121, 111, 117, 114, 32, 114, 111, 97, 100, 44, 32, 97, 110, 100, 32, 121, 111, 117, 114, 115, 32, 97, 108, 111, 110, 101, 44, 32, 111, 116, 104, 101, 114, 115, 32, 109, 97, 121, 32, 119, 97, 108, 107, 32, 105, 116, 32, 119, 105, 116, 104, 32, 121, 111, 117, 44, 32, 98, 117, 116, 32, 110, 111, 32, 111, 110, 101, 32, 99, 97, 110, 32, 119, 97, 108, 107, 32, 105, 116, 32, 102, 111, 114, 32, 121, 111, 117, 46]
+        620c6d948        168 (something else)    (somewhere else)               (something else)
+        620c6d9f0         16 model.Frase         .elementData[22]               (object)
+        620c6da00         48 (something else)    (somewhere else)               (something else)
+        620c6da30         24 java.lang.String    .elementData[22].q             (object)
+        620c6da48        120 [B                  .elementData[22].q.value       [89, 111, 117, 114, 32, 98, 101, 115, 116, 32, 108, 105, 102, 101, 32, 119, 105, 108, 108, 32, 110, 111, 116, 32, 98, 101, 32, 102, 111, 117, 110, 100, 32, 105, 110, 32, 99, 111, 109, 102, 111, 114, 116, 46, 32, 73, 116, 32, 119, 105, 108, 108, 32, 98, 101, 32, 102, 111, 117, 110, 100, 32, 105, 110, 32, 102, 105, 103, 104, 116, 105, 110, 103, 32, 102, 111, 114, 32, 119, 104, 97, 116, 32, 121, 111, 117, 32, 98, 101, 108, 105, 101, 118, 101, 32, 105, 110, 46]
+        620c6dac0        320 (something else)    (somewhere else)               (something else)
+        620c6dc00         16 model.Frase         .elementData[23]               (object)
+        620c6dc10         48 (something else)    (somewhere else)               (something else)
+        620c6dc40         24 java.lang.String    .elementData[23].q             (object)
+        620c6dc58         64 [B                  .elementData[23].q.value       [84, 104, 101, 32, 115, 111, 117, 114, 99, 101, 32, 111, 102, 32, 97, 32, 116, 114, 117, 101, 32, 115, 109, 105, 108, 101, 32, 105, 115, 32, 97, 110, 32, 97, 119, 97, 107, 101, 110, 101, 100, 32, 109, 105, 110, 100, 46]
+        620c6dc98        168 (something else)    (somewhere else)               (something else)
+        620c6dd40         16 model.Frase         .elementData[24]               (object)
+        620c6dd50         48 (something else)    (somewhere else)               (something else)
+        620c6dd80         24 java.lang.String    .elementData[24].q             (object)
+        620c6dd98         88 [B                  .elementData[24].q.value       [84, 104, 101, 32, 104, 101, 97, 108, 116, 104, 32, 111, 102, 32, 110, 97, 116, 105, 111, 110, 115, 32, 105, 115, 32, 109, 111, 114, 101, 32, 105, 109, 112, 111, 114, 116, 97, 110, 116, 32, 116, 104, 97, 110, 32, 116, 104, 101, 32, 119, 101, 97, 108, 116, 104, 32, 111, 102, 32, 110, 97, 116, 105, 111, 110, 115, 46]
+        620c6ddf0        168 (something else)    (somewhere else)               (something else)
+        620c6de98         16 model.Frase         .elementData[25]               (object)
+        620c6dea8         48 (something else)    (somewhere else)               (something else)
+        620c6ded8         24 java.lang.String    .elementData[25].q             (object)
+        620c6def0         72 [B                  .elementData[25].q.value       [84, 104, 101, 32, 104, 97, 114, 100, 101, 114, 32, 116, 104, 101, 32, 99, 111, 110, 102, 108, 105, 99, 116, 44, 32, 116, 104, 101, 32, 103, 114, 101, 97, 116, 101, 114, 32, 116, 104, 101, 32, 116, 114, 105, 117, 109, 112, 104, 46, 32]
+        620c6df38        168 (something else)    (somewhere else)               (something else)
+        620c6dfe0         16 model.Frase         .elementData[26]               (object)
+        620c6dff0         48 (something else)    (somewhere else)               (something else)
+        620c6e020         24 java.lang.String    .elementData[26].q             (object)
+        620c6e038        112 [B                  .elementData[26].q.value       [84, 104, 101, 32, 119, 104, 111, 108, 101, 32, 111, 102, 32, 108, 105, 102, 101, 44, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 109, 111, 109, 101, 110, 116, 32, 121, 111, 117, 32, 97, 114, 101, 32, 98, 111, 114, 110, 32, 116, 111, 32, 116, 104, 101, 32, 109, 111, 109, 101, 110, 116, 32, 121, 111, 117, 32, 100, 105, 101, 44, 32, 105, 115, 32, 97, 32, 112, 114, 111, 99, 101, 115, 115, 32, 111, 102, 32, 108, 101, 97, 114, 110, 105, 110, 103, 46]
+        620c6e0a8        168 (something else)    (somewhere else)               (something else)
+        620c6e150         16 model.Frase         .elementData[27]               (object)
+        620c6e160         48 (something else)    (somewhere else)               (something else)
+        620c6e190         24 java.lang.String    .elementData[27].q             (object)
+        620c6e1a8         96 [B                  .elementData[27].q.value       [73, 110, 32, 116, 104, 114, 101, 101, 32, 119, 111, 114, 100, 115, 32, 73, 32, 99, 97, 110, 32, 115, 117, 109, 32, 117, 112, 32, 101, 118, 101, 114, 121, 116, 104, 105, 110, 103, 32, 73, 39, 118, 101, 32, 108, 101, 97, 114, 110, 101, 100, 32, 97, 98, 111, 117, 116, 32, 108, 105, 102, 101, 58, 32, 105, 116, 32, 103, 111, 101, 115, 32, 111, 110, 46]
+        620c6e208        168 (something else)    (somewhere else)               (something else)
+        620c6e2b0         16 model.Frase         .elementData[28]               (object)
+        620c6e2c0         48 (something else)    (somewhere else)               (something else)
+        620c6e2f0         24 java.lang.String    .elementData[28].q             (object)
+        620c6e308         48 [B                  .elementData[28].q.value       [67, 111, 110, 115, 99, 105, 101, 110, 99, 101, 32, 105, 115, 32, 97, 32, 109, 97, 110, 39, 115, 32, 99, 111, 109, 112, 97, 115, 115, 46, 32]
+        620c6e338        168 (something else)    (somewhere else)               (something else)
+        620c6e3e0         16 model.Frase         .elementData[29]               (object)
+        620c6e3f0         48 (something else)    (somewhere else)               (something else)
+        620c6e420         24 java.lang.String    .elementData[29].q             (object)
+        620c6e438         88 [B                  .elementData[29].q.value       [73, 116, 32, 105, 115, 32, 117, 115, 101, 108, 101, 115, 115, 32, 116, 111, 32, 109, 101, 101, 116, 32, 114, 101, 118, 101, 110, 103, 101, 32, 119, 105, 116, 104, 32, 114, 101, 118, 101, 110, 103, 101, 59, 32, 105, 116, 32, 119, 105, 108, 108, 32, 104, 101, 97, 108, 32, 110, 111, 116, 104, 105, 110, 103, 46]
+        620c6e490        168 (something else)    (somewhere else)               (something else)
+        620c6e538         16 model.Frase         .elementData[30]               (object)
+        620c6e548         48 (something else)    (somewhere else)               (something else)
+        620c6e578         24 java.lang.String    .elementData[30].q             (object)
+        620c6e590         88 [B                  .elementData[30].q.value       [65, 32, 103, 101, 110, 116, 108, 101, 109, 97, 110, 32, 105, 115, 32, 111, 110, 101, 32, 119, 104, 111, 32, 112, 117, 116, 115, 32, 109, 111, 114, 101, 32, 105, 110, 116, 111, 32, 116, 104, 101, 32, 119, 111, 114, 108, 100, 32, 116, 104, 97, 110, 32, 104, 101, 32, 116, 97, 107, 101, 115, 32, 111, 117, 116, 46]
+        620c6e5e8        168 (something else)    (somewhere else)               (something else)
+        620c6e690         16 model.Frase         .elementData[31]               (object)
+        620c6e6a0         48 (something else)    (somewhere else)               (something else)
+        620c6e6d0         24 java.lang.String    .elementData[31].q             (object)
+        620c6e6e8         56 [B                  .elementData[31].q.value       [65, 110, 120, 105, 101, 116, 121, 32, 105, 115, 32, 116, 104, 101, 32, 100, 105, 122, 122, 105, 110, 101, 115, 115, 32, 111, 102, 32, 102, 114, 101, 101, 100, 111, 109, 46]
+        620c6e720        168 (something else)    (somewhere else)               (something else)
+        620c6e7c8         16 model.Frase         .elementData[32]               (object)
+        620c6e7d8         48 (something else)    (somewhere else)               (something else)
+        620c6e808         24 java.lang.String    .elementData[32].q             (object)
+        620c6e820         64 [B                  .elementData[32].q.value       [73, 109, 97, 103, 105, 110, 97, 116, 105, 111, 110, 32, 105, 115, 32, 116, 104, 101, 32, 98, 101, 103, 105, 110, 110, 105, 110, 103, 32, 111, 102, 32, 99, 114, 101, 97, 116, 105, 111, 110, 46]
+        620c6e860        168 (something else)    (somewhere else)               (something else)
+        620c6e908         16 model.Frase         .elementData[33]               (object)
+        620c6e918         48 (something else)    (somewhere else)               (something else)
+        620c6e948         24 java.lang.String    .elementData[33].q             (object)
+        620c6e960         96 [B                  .elementData[33].q.value       [89, 111, 117, 32, 97, 114, 101, 32, 119, 104, 97, 116, 32, 121, 111, 117, 32, 98, 101, 108, 105, 101, 118, 101, 32, 105, 110, 46, 32, 89, 111, 117, 32, 98, 101, 99, 111, 109, 101, 32, 116, 104, 97, 116, 32, 119, 104, 105, 99, 104, 32, 121, 111, 117, 32, 98, 101, 108, 105, 101, 118, 101, 32, 121, 111, 117, 32, 99, 97, 110, 32, 98, 101, 99, 111, 109, 101, 46]
+        620c6e9c0        384 (something else)    (somewhere else)               (something else)
+        620c6eb40         16 model.Frase         .elementData[34]               (object)
+        620c6eb50         48 (something else)    (somewhere else)               (something else)
+        620c6eb80         24 java.lang.String    .elementData[34].q             (object)
+        620c6eb98         96 [B                  .elementData[34].q.value       [84, 104, 101, 32, 119, 111, 114, 115, 116, 32, 112, 97, 114, 116, 32, 111, 102, 32, 115, 117, 99, 99, 101, 115, 115, 32, 105, 115, 32, 116, 114, 121, 105, 110, 103, 32, 116, 111, 32, 102, 105, 110, 100, 32, 115, 111, 109, 101, 111, 110, 101, 32, 119, 104, 111, 32, 105, 115, 32, 104, 97, 112, 112, 121, 32, 102, 111, 114, 32, 121, 111, 117, 46]
+        620c6ebf8        168 (something else)    (somewhere else)               (something else)
+        620c6eca0         16 model.Frase         .elementData[35]               (object)
+        620c6ecb0         48 (something else)    (somewhere else)               (something else)
+        620c6ece0         24 java.lang.String    .elementData[35].q             (object)
+        620c6ecf8         56 [B                  .elementData[35].q.value       [69, 97, 99, 104, 32, 112, 114, 111, 98, 108, 101, 109, 32, 104, 97, 115, 32, 97, 32, 112, 111, 115, 105, 116, 105, 118, 101, 32, 115, 105, 100, 101, 46]
+        620c6ed30        168 (something else)    (somewhere else)               (something else)
+        620c6edd8         16 model.Frase         .elementData[36]               (object)
+        620c6ede8         48 (something else)    (somewhere else)               (something else)
+        620c6ee18         24 java.lang.String    .elementData[36].q             (object)
+        620c6ee30         72 [B                  .elementData[36].q.value       [84, 104, 111, 115, 101, 32, 119, 104, 111, 32, 114, 101, 97, 108, 105, 122, 101, 32, 116, 104, 101, 105, 114, 32, 102, 111, 108, 108, 121, 32, 97, 114, 101, 32, 110, 111, 116, 32, 116, 114, 117, 101, 32, 102, 111, 111, 108, 115, 46]
+        620c6ee78        168 (something else)    (somewhere else)               (something else)
+        620c6ef20         16 model.Frase         .elementData[37]               (object)
+        620c6ef30         48 (something else)    (somewhere else)               (something else)
+        620c6ef60         24 java.lang.String    .elementData[37].q             (object)
+        620c6ef78         72 [B                  .elementData[37].q.value       [73, 116, 32, 105, 115, 32, 110, 111, 116, 32, 97, 115, 32, 105, 109, 112, 111, 114, 116, 97, 110, 116, 32, 104, 111, 119, 32, 119, 101, 32, 115, 116, 97, 114, 116, 44, 32, 98, 117, 116, 32, 104, 111, 119, 32, 119, 101, 32, 102, 105, 110, 105, 115, 104, 46]
+        620c6efc0        168 (something else)    (somewhere else)               (something else)
+        620c6f068         16 model.Frase         .elementData[38]               (object)
+        620c6f078         48 (something else)    (somewhere else)               (something else)
+        620c6f0a8         24 java.lang.String    .elementData[38].q             (object)
+        620c6f0c0         80 [B                  .elementData[38].q.value       [83, 111, 109, 101, 116, 105, 109, 101, 115, 44, 32, 116, 104, 101, 32, 111, 110, 108, 121, 32, 119, 97, 121, 32, 116, 111, 32, 101, 118, 111, 108, 118, 101, 32, 105, 115, 32, 116, 111, 32, 111, 112, 101, 110, 32, 111, 117, 114, 115, 101, 108, 118, 101, 115, 32, 102, 117, 108, 108, 121, 46]
+        620c6f110        168 (something else)    (somewhere else)               (something else)
+        620c6f1b8         16 model.Frase         .elementData[39]               (object)
+        620c6f1c8         48 (something else)    (somewhere else)               (something else)
+        620c6f1f8         24 java.lang.String    .elementData[39].q             (object)
+        620c6f210         64 [B                  .elementData[39].q.value       [65, 32, 116, 104, 105, 110, 103, 32, 109, 117, 115, 116, 32, 98, 101, 32, 108, 111, 118, 101, 100, 32, 98, 101, 102, 111, 114, 101, 32, 105, 116, 32, 105, 115, 32, 108, 111, 118, 97, 98, 108, 101, 46]
+        620c6f250        168 (something else)    (somewhere else)               (something else)
+        620c6f2f8         16 model.Frase         .elementData[40]               (object)
+        620c6f308         48 (something else)    (somewhere else)               (something else)
+        620c6f338         24 java.lang.String    .elementData[40].q             (object)
+        620c6f350        192 [B                  .elementData[40].q.value       [80, 101, 114, 104, 97, 112, 115, 32, 116, 104, 101, 32, 109, 111, 115, 116, 32, 116, 114, 97, 103, 105, 99, 32, 116, 104, 105, 110, 103, 32, 97, 98, 111, 117, 116, 32, 109, 97, 110, 107, 105, 110, 100, 32, 105, 115, 32, 116, 104, 97, 116, 32, 119, 101, 32, 97, 114, 101, 32, 97, 108, 108, 32, 100, 114, 101, 97, 109, 105, 110, 103, 32, 97, 98, 111, 117, 116, 32, 115, 111, 109, 101, 32, 109, 97, 103, 105, 99, 97, 108, 32, 103, 97, 114, 100, 101, 110, 32, 111, 118, 101, 114, 32, 116, 104, 101, 32, 104, 111, 114, 105, 122, 111, 110, 44, 32, 105, 110, 115, 116, 101, 97, 100, 32, 111, 102, 32, 101, 110, 106, 111, 121, 105, 110, 103, 32, 116, 104, 101, 32, 114, 111, 115, 101, 115, 32, 116, 104, 97, 116, 32, 97, 114, 101, 32, 114, 105, 103, 104, 116, 32, 111, 117, 116, 115, 105, 100, 101, 32, 116, 111, 100, 97, 121, 46]
+        620c6f410        168 (something else)    (somewhere else)               (something else)
+        620c6f4b8         16 model.Frase         .elementData[41]               (object)
+        620c6f4c8         48 (something else)    (somewhere else)               (something else)
+        620c6f4f8         24 java.lang.String    .elementData[41].q             (object)
+        620c6f510         64 [B                  .elementData[41].q.value       [84, 117, 114, 110, 32, 111, 102, 102, 32, 121, 111, 117, 114, 32, 109, 105, 110, 100, 44, 32, 114, 101, 108, 97, 120, 44, 32, 97, 110, 100, 32, 102, 108, 111, 97, 116, 32, 100, 111, 119, 110, 115, 116, 114, 101, 97, 109, 46]
+        620c6f550        168 (something else)    (somewhere else)               (something else)
+        620c6f5f8         16 model.Frase         .elementData[42]               (object)
+        620c6f608         48 (something else)    (somewhere else)               (something else)
+        620c6f638         24 java.lang.String    .elementData[42].q             (object)
+        620c6f650         80 [B                  .elementData[42].q.value       [69, 118, 101, 114, 121, 100, 97, 121, 32, 121, 111, 117, 32, 99, 97, 110, 32, 116, 97, 107, 101, 32, 97, 32, 116, 105, 110, 121, 32, 115, 116, 101, 112, 32, 105, 110, 32, 116, 104, 101, 32, 114, 105, 103, 104, 116, 32, 100, 105, 114, 101, 99, 116, 105, 111, 110, 46]
+        620c6f6a0        168 (something else)    (somewhere else)               (something else)
+        620c6f748         16 model.Frase         .elementData[43]               (object)
+        620c6f758        160 (something else)    (somewhere else)               (something else)
+        620c6f7f8         24 java.lang.String    .elementData[43].q             (object)
+        620c6f810         48 [B                  .elementData[43].q.value       [76, 105, 102, 101, 32, 105, 115, 32, 108, 111, 118, 101, 32, 97, 110, 100, 32, 108, 111, 118, 101, 32, 105, 115, 32, 108, 105, 102, 101, 46]
+        620c6f840        168 (something else)    (somewhere else)               (something else)
+        620c6f8e8         16 model.Frase         .elementData[44]               (object)
+        620c6f8f8         48 (something else)    (somewhere else)               (something else)
+        620c6f928         24 java.lang.String    .elementData[44].q             (object)
+        620c6f940         56 [B                  .elementData[44].q.value       [76, 101, 116, 32, 101, 97, 99, 104, 32, 109, 97, 110, 32, 101, 120, 101, 114, 99, 105, 115, 101, 32, 116, 104, 101, 32, 97, 114, 116, 32, 104, 101, 32, 107, 110, 111, 119, 115, 46]
+        620c6f978        168 (something else)    (somewhere else)               (something else)
+        620c6fa20         16 model.Frase         .elementData[45]               (object)
+        620c6fa30         48 (something else)    (somewhere else)               (something else)
+        620c6fa60         24 java.lang.String    .elementData[45].q             (object)
+        620c6fa78        104 [B                  .elementData[45].q.value       [87, 101, 32, 99, 97, 110, 32, 107, 110, 111, 119, 32, 111, 110, 108, 121, 32, 116, 104, 97, 116, 32, 119, 101, 32, 107, 110, 111, 119, 32, 110, 111, 116, 104, 105, 110, 103, 46, 32, 65, 110, 100, 32, 116, 104, 97, 116, 32, 105, 115, 32, 116, 104, 101, 32, 104, 105, 103, 104, 101, 115, 116, 32, 100, 101, 103, 114, 101, 101, 32, 111, 102, 32, 104, 117, 109, 97, 110, 32, 119, 105, 115, 100, 111, 109, 46]
+        620c6fae0        168 (something else)    (somewhere else)               (something else)
+        620c6fb88         16 model.Frase         .elementData[46]               (object)
+        620c6fb98         48 (something else)    (somewhere else)               (something else)
+        620c6fbc8         24 java.lang.String    .elementData[46].q             (object)
+        620c6fbe0        112 [B                  .elementData[46].q.value       [66, 101, 102, 111, 114, 101, 32, 101, 110, 108, 105, 103, 104, 116, 101, 110, 109, 101, 110, 116, 59, 32, 99, 104, 111, 112, 32, 119, 111, 111, 100, 44, 32, 99, 97, 114, 114, 121, 32, 119, 97, 116, 101, 114, 46, 32, 65, 102, 116, 101, 114, 32, 101, 110, 108, 105, 103, 104, 116, 101, 110, 109, 101, 110, 116, 59, 32, 99, 104, 111, 112, 32, 119, 111, 111, 100, 44, 32, 99, 97, 114, 114, 121, 32, 119, 97, 116, 101, 114, 46]
+        620c6fc50        168 (something else)    (somewhere else)               (something else)
+        620c6fcf8         16 model.Frase         .elementData[47]               (object)
+        620c6fd08        232 (something else)    (somewhere else)               (something else)
+        620c6fdf0         24 java.lang.String    .elementData[47].q             (object)
+        620c6fe08        104 [B                  .elementData[47].q.value       [70, 101, 101, 108, 105, 110, 103, 115, 32, 99, 111, 109, 101, 32, 97, 110, 100, 32, 103, 111, 32, 108, 105, 107, 101, 32, 99, 108, 111, 117, 100, 115, 32, 105, 110, 32, 97, 32, 119, 105, 110, 100, 121, 32, 115, 107, 121, 46, 32, 67, 111, 110, 115, 99, 105, 111, 117, 115, 32, 98, 114, 101, 97, 116, 104, 105, 110, 103, 32, 105, 115, 32, 109, 121, 32, 97, 110, 99, 104, 111, 114, 46]
+        620c6fe70        168 (something else)    (somewhere else)               (something else)
+        620c6ff18         16 model.Frase         .elementData[48]               (object)
+        620c6ff28         48 (something else)    (somewhere else)               (something else)
+        620c6ff58         24 java.lang.String    .elementData[48].q             (object)
+        620c6ff70         48 [B                  .elementData[48].q.value       [66, 101, 32, 99, 111, 110, 102, 105, 100, 101, 110, 116, 44, 32, 110, 111, 116, 32, 99, 101, 114, 116, 97, 105, 110, 46]
+        620c6ffa0        168 (something else)    (somewhere else)               (something else)
+        620c70048         16 model.Frase         .elementData[49]               (object)
+        620c70058         48 (something else)    (somewhere else)               (something else)
+        620c70088         24 java.lang.String    .elementData[49].q             (object)
+        620c700a0        160 [B                  .elementData[49].q.value       [70, 111, 114, 32, 101, 118, 101, 114, 121, 32, 101, 102, 102, 101, 99, 116, 32, 116, 104, 101, 114, 101, 32, 105, 115, 32, 97, 32, 114, 111, 111, 116, 32, 99, 97, 117, 115, 101, 46, 32, 70, 105, 110, 100, 32, 97, 110, 100, 32, 97, 100, 100, 114, 101, 115, 115, 32, 116, 104, 101, 32, 114, 111, 111, 116, 32, 99, 97, 117, 115, 101, 32, 114, 97, 116, 104, 101, 114, 32, 116, 104, 97, 110, 32, 116, 114, 121, 32, 116, 111, 32, 102, 105, 120, 32, 116, 104, 101, 32, 101, 102, 102, 101, 99, 116, 44, 32, 97, 115, 32, 116, 104, 101, 114, 101, 32, 105, 115, 32, 110, 111, 32, 101, 110, 100, 32, 116, 111, 32, 116, 104, 101, 32, 108, 97, 116, 116, 101, 114, 46]
+        620c70140        144 (something else)    (somewhere else)               (something else)
+        620c701d0        312 [Ljava.lang.Object; .elementData                   [(object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+Addresses are stable after 1 tries.
+
+
+|====== Tamanio total en memoria ======|
+6768 bytes
+2025-09-10 19:07:17 [main] INFO  performance - Peso de fraseEncriptada: 
+|====== Layout Interno ======|
+java.util.ArrayDeque object internals:
+OFF  SZ                 TYPE DESCRIPTION               VALUE
+  0   8                      (object header: mark)     0x0000000000000001 (non-biasable; age: 0)
+  8   4                      (object header: class)    0x0020cf90
+ 12   4                  int ArrayDeque.head           19
+ 16   4                  int ArrayDeque.tail           12
+ 20   4   java.lang.Object[] ArrayDeque.elements       [(object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), null, null, null, null, null, null, null, (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object)]
+Instance size: 24 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+|====== Layout con Referencias ======|
+java.util.ArrayDeque@1af1347dd object externals:
+          ADDRESS       SIZE TYPE                 PATH                           VALUE
+        601cce4e8         16 java.lang.Integer    .elements[27].cabeza.valor     71
+        601cce4f8     151024 (something else)     (somewhere else)               (something else)
+        601cf32e8         16 java.lang.Integer    .elements[11].cabeza.referencia.referencia.referencia.referencia.referencia.referencia.valor 59
+        601cf32f8         16 (something else)     (somewhere else)               (something else)
+        601cf3308         16 java.lang.Integer    .elements[26].cabeza.referencia.referencia.referencia.referencia.referencia.valor 57
+        601cf3318        464 (something else)     (somewhere else)               (something else)
+        601cf34e8         16 java.lang.Integer    .elements[21].cabeza.referencia.referencia.referencia.referencia.referencia.valor 127
+        601cf34f8         16 java.lang.Integer    .elements[35].cabeza.referencia.referencia.valor 126
+        601cf3508         16 java.lang.Integer    .elements[33].cabeza.referencia.referencia.referencia.referencia.referencia.valor 125
+        601cf3518         16 (something else)     (somewhere else)               (something else)
+        601cf3528         16 java.lang.Integer    .elements[31].cabeza.referencia.referencia.referencia.valor 123
+        601cf3538         16 java.lang.Integer    .elements[32].cabeza.referencia.referencia.valor 122
+        601cf3548         16 java.lang.Integer    .elements[33].cabeza.referencia.referencia.valor 121
+        601cf3558         16 (something else)     (somewhere else)               (something else)
+        601cf3568         16 java.lang.Integer    .elements[19].cabeza.referencia.referencia.valor 119
+        601cf3578         16 java.lang.Integer    .elements[23].cabeza.referencia.valor 118
+        601cf3588         16 java.lang.Integer    .elements[35].cabeza.valor     117
+        601cf3598         16 java.lang.Integer    .elements[31].cabeza.referencia.referencia.valor 116
+        601cf35a8         16 java.lang.Integer    .elements[33].cabeza.valor     115
+        601cf35b8         16 java.lang.Integer    .elements[31].cabeza.referencia.valor 114
+        601cf35c8         16 java.lang.Integer    .elements[28].cabeza.referencia.valor 113
+        601cf35d8         16 (something else)     (somewhere else)               (something else)
+        601cf35e8         16 java.lang.Integer    .elements[33].cabeza.referencia.referencia.referencia.valor 111
+        601cf35f8         16 java.lang.Integer    .elements[33].cabeza.referencia.referencia.referencia.referencia.valor 110
+        601cf3608         16 java.lang.Integer    .elements[11].cabeza.valor     109
+        601cf3618         16 java.lang.Integer    .elements[27].cabeza.referencia.valor 108
+        601cf3628         16 java.lang.Integer    .elements[34].cabeza.referencia.valor 107
+        601cf3638         16 java.lang.Integer    .elements[30].cabeza.referencia.referencia.valor 106
+        601cf3648         16 java.lang.Integer    .elements[29].cabeza.referencia.referencia.valor 105
+        601cf3658         16 (something else)     (somewhere else)               (something else)
+        601cf3668         16 java.lang.Integer    .elements[29].cabeza.referencia.valor 103
+        601cf3678         16 java.lang.Integer    .elements[34].cabeza.referencia.referencia.valor 102
+        601cf3688         16 (something else)     (somewhere else)               (something else)
+        601cf3698         16 java.lang.Integer    .elements[33].cabeza.referencia.valor 100
+        601cf36a8         16 (something else)     (somewhere else)               (something else)
+        601cf36b8         16 java.lang.Integer    .elements[29].cabeza.valor     98
+        601cf36c8  517598864 (something else)     (somewhere else)               (something else)
+        620a92558         24 java.util.ArrayDeque                                (object)
+        620a92570       2112 (something else)     (somewhere else)               (something else)
+        620a92db0         24 model.LinkedList     .elements[19]                  (object)
+        620a92dc8         72 (something else)     (somewhere else)               (something else)
+        620a92e10         24 model.Nodo           .elements[19].cabeza           (object)
+        620a92e28         96 (something else)     (somewhere else)               (something else)
+        620a92e88         24 model.Nodo           .elements[19].cabeza.referencia (object)
+        620a92ea0        144 (something else)     (somewhere else)               (something else)
+        620a92f30         24 model.Nodo           .elements[19].cabeza.referencia.referencia (object)
+        620a92f48        360 (something else)     (somewhere else)               (something else)
+        620a930b0         24 model.LinkedList     .elements[20]                  (object)
+        620a930c8         80 (something else)     (somewhere else)               (something else)
+        620a93118         24 model.Nodo           .elements[20].cabeza           (object)
+        620a93130         96 (something else)     (somewhere else)               (something else)
+        620a93190         24 model.Nodo           .elements[20].cabeza.referencia (object)
+        620a931a8        144 (something else)     (somewhere else)               (something else)
+        620a93238         24 model.Nodo           .elements[20].cabeza.referencia.referencia (object)
+        620a93250        144 (something else)     (somewhere else)               (something else)
+        620a932e0         24 model.Nodo           .elements[20].cabeza.referencia.referencia.referencia (object)
+        620a932f8        144 (something else)     (somewhere else)               (something else)
+        620a93388         16 java.lang.Integer    .elements[20].cabeza.referencia.referencia.referencia.referencia.valor 130
+        620a93398         24 model.Nodo           .elements[20].cabeza.referencia.referencia.referencia.referencia (object)
+        620a933b0        504 (something else)     (somewhere else)               (something else)
+        620a935a8         24 model.LinkedList     .elements[21]                  (object)
+        620a935c0         80 (something else)     (somewhere else)               (something else)
+        620a93610         24 model.Nodo           .elements[21].cabeza           (object)
+        620a93628         96 (something else)     (somewhere else)               (something else)
+        620a93688         24 model.Nodo           .elements[21].cabeza.referencia (object)
+        620a936a0        144 (something else)     (somewhere else)               (something else)
+        620a93730         24 model.Nodo           .elements[21].cabeza.referencia.referencia (object)
+        620a93748        144 (something else)     (somewhere else)               (something else)
+        620a937d8         24 model.Nodo           .elements[21].cabeza.referencia.referencia.referencia (object)
+        620a937f0        144 (something else)     (somewhere else)               (something else)
+        620a93880         24 model.Nodo           .elements[21].cabeza.referencia.referencia.referencia.referencia (object)
+        620a93898        144 (something else)     (somewhere else)               (something else)
+        620a93928         24 model.Nodo           .elements[21].cabeza.referencia.referencia.referencia.referencia.referencia (object)
+        620a93940        648 (something else)     (somewhere else)               (something else)
+        620a93bc8         24 model.LinkedList     .elements[22]                  (object)
+        620a93be0         80 (something else)     (somewhere else)               (something else)
+        620a93c30         24 model.Nodo           .elements[22].cabeza           (object)
+        620a93c48         96 (something else)     (somewhere else)               (something else)
+        620a93ca8         24 model.Nodo           .elements[22].cabeza.referencia (object)
+        620a93cc0        144 (something else)     (somewhere else)               (something else)
+        620a93d50         24 model.Nodo           .elements[22].cabeza.referencia.referencia (object)
+        620a93d68        144 (something else)     (somewhere else)               (something else)
+        620a93df8         24 model.Nodo           .elements[22].cabeza.referencia.referencia.referencia (object)
+        620a93e10        144 (something else)     (somewhere else)               (something else)
+        620a93ea0         24 model.Nodo           .elements[22].cabeza.referencia.referencia.referencia.referencia (object)
+        620a93eb8        504 (something else)     (somewhere else)               (something else)
+        620a940b0         24 model.LinkedList     .elements[23]                  (object)
+        620a940c8         72 (something else)     (somewhere else)               (something else)
+        620a94110         24 model.Nodo           .elements[23].cabeza           (object)
+        620a94128         96 (something else)     (somewhere else)               (something else)
+        620a94188         24 model.Nodo           .elements[23].cabeza.referencia (object)
+        620a941a0        360 (something else)     (somewhere else)               (something else)
+        620a94308         24 model.LinkedList     .elements[24]                  (object)
+        620a94320         72 (something else)     (somewhere else)               (something else)
+        620a94368         24 model.Nodo           .elements[24].cabeza           (object)
+        620a94380        264 (something else)     (somewhere else)               (something else)
+        620a94488         24 model.LinkedList     .elements[25]                  (object)
+        620a944a0         72 (something else)     (somewhere else)               (something else)
+        620a944e8         24 model.Nodo           .elements[25].cabeza           (object)
+        620a94500         96 (something else)     (somewhere else)               (something else)
+        620a94560         24 model.Nodo           .elements[25].cabeza.referencia (object)
+        620a94578        144 (something else)     (somewhere else)               (something else)
+        620a94608         24 model.Nodo           .elements[25].cabeza.referencia.referencia (object)
+        620a94620        144 (something else)     (somewhere else)               (something else)
+        620a946b0         24 model.Nodo           .elements[25].cabeza.referencia.referencia.referencia (object)
+        620a946c8        504 (something else)     (somewhere else)               (something else)
+        620a948c0         24 model.LinkedList     .elements[26]                  (object)
+        620a948d8         80 (something else)     (somewhere else)               (something else)
+        620a94928         24 model.Nodo           .elements[26].cabeza           (object)
+        620a94940         96 (something else)     (somewhere else)               (something else)
+        620a949a0         24 model.Nodo           .elements[26].cabeza.referencia (object)
+        620a949b8        144 (something else)     (somewhere else)               (something else)
+        620a94a48         24 model.Nodo           .elements[26].cabeza.referencia.referencia (object)
+        620a94a60        144 (something else)     (somewhere else)               (something else)
+        620a94af0         24 model.Nodo           .elements[26].cabeza.referencia.referencia.referencia (object)
+        620a94b08        144 (something else)     (somewhere else)               (something else)
+        620a94b98         24 model.Nodo           .elements[26].cabeza.referencia.referencia.referencia.referencia (object)
+        620a94bb0        144 (something else)     (somewhere else)               (something else)
+        620a94c40         24 model.Nodo           .elements[26].cabeza.referencia.referencia.referencia.referencia.referencia (object)
+        620a94c58        648 (something else)     (somewhere else)               (something else)
+        620a94ee0         24 model.LinkedList     .elements[27]                  (object)
+        620a94ef8         72 (something else)     (somewhere else)               (something else)
+        620a94f40         24 model.Nodo           .elements[27].cabeza           (object)
+        620a94f58         96 (something else)     (somewhere else)               (something else)
+        620a94fb8         24 model.Nodo           .elements[27].cabeza.referencia (object)
+        620a94fd0        144 (something else)     (somewhere else)               (something else)
+        620a95060         24 model.Nodo           .elements[27].cabeza.referencia.referencia (object)
+        620a95078        144 (something else)     (somewhere else)               (something else)
+        620a95108         24 model.Nodo           .elements[27].cabeza.referencia.referencia.referencia (object)
+        620a95120        504 (something else)     (somewhere else)               (something else)
+        620a95318         24 model.LinkedList     .elements[28]                  (object)
+        620a95330         72 (something else)     (somewhere else)               (something else)
+        620a95378         24 model.Nodo           .elements[28].cabeza           (object)
+        620a95390         96 (something else)     (somewhere else)               (something else)
+        620a953f0         24 model.Nodo           .elements[28].cabeza.referencia (object)
+        620a95408        144 (something else)     (somewhere else)               (something else)
+        620a95498         24 model.Nodo           .elements[28].cabeza.referencia.referencia (object)
+        620a954b0        360 (something else)     (somewhere else)               (something else)
+        620a95618         24 model.LinkedList     .elements[29]                  (object)
+        620a95630         80 (something else)     (somewhere else)               (something else)
+        620a95680         24 model.Nodo           .elements[29].cabeza           (object)
+        620a95698         96 (something else)     (somewhere else)               (something else)
+        620a956f8         24 model.Nodo           .elements[29].cabeza.referencia (object)
+        620a95710        144 (something else)     (somewhere else)               (something else)
+        620a957a0         24 model.Nodo           .elements[29].cabeza.referencia.referencia (object)
+        620a957b8        144 (something else)     (somewhere else)               (something else)
+        620a95848         24 model.Nodo           .elements[29].cabeza.referencia.referencia.referencia (object)
+        620a95860        144 (something else)     (somewhere else)               (something else)
+        620a958f0         24 model.Nodo           .elements[29].cabeza.referencia.referencia.referencia.referencia (object)
+        620a95908        144 (something else)     (somewhere else)               (something else)
+        620a95998         24 model.Nodo           .elements[29].cabeza.referencia.referencia.referencia.referencia.referencia (object)
+        620a959b0        144 (something else)     (somewhere else)               (something else)
+        620a95a40         16 java.lang.Integer    .elements[29].cabeza.referencia.referencia.referencia.referencia.referencia.referencia.valor 128
+        620a95a50         24 model.Nodo           .elements[29].cabeza.referencia.referencia.referencia.referencia.referencia.referencia (object)
+        620a95a68        648 (something else)     (somewhere else)               (something else)
+        620a95cf0         24 model.LinkedList     .elements[30]                  (object)
+        620a95d08         72 (something else)     (somewhere else)               (something else)
+        620a95d50         24 model.Nodo           .elements[30].cabeza           (object)
+        620a95d68         96 (something else)     (somewhere else)               (something else)
+        620a95dc8         24 model.Nodo           .elements[30].cabeza.referencia (object)
+        620a95de0        144 (something else)     (somewhere else)               (something else)
+        620a95e70         24 model.Nodo           .elements[30].cabeza.referencia.referencia (object)
+        620a95e88        360 (something else)     (somewhere else)               (something else)
+        620a95ff0         24 model.LinkedList     .elements[31]                  (object)
+        620a96008         72 (something else)     (somewhere else)               (something else)
+        620a96050         24 model.Nodo           .elements[31].cabeza           (object)
+        620a96068         96 (something else)     (somewhere else)               (something else)
+        620a960c8         24 model.Nodo           .elements[31].cabeza.referencia (object)
+        620a960e0        144 (something else)     (somewhere else)               (something else)
+        620a96170         24 model.Nodo           .elements[31].cabeza.referencia.referencia (object)
+        620a96188        144 (something else)     (somewhere else)               (something else)
+        620a96218         24 model.Nodo           .elements[31].cabeza.referencia.referencia.referencia (object)
+        620a96230        504 (something else)     (somewhere else)               (something else)
+        620a96428         24 model.LinkedList     .elements[32]                  (object)
+        620a96440         80 (something else)     (somewhere else)               (something else)
+        620a96490         24 model.Nodo           .elements[32].cabeza           (object)
+        620a964a8         96 (something else)     (somewhere else)               (something else)
+        620a96508         24 model.Nodo           .elements[32].cabeza.referencia (object)
+        620a96520        144 (something else)     (somewhere else)               (something else)
+        620a965b0         24 model.Nodo           .elements[32].cabeza.referencia.referencia (object)
+        620a965c8        144 (something else)     (somewhere else)               (something else)
+        620a96658         24 model.Nodo           .elements[32].cabeza.referencia.referencia.referencia (object)
+        620a96670        144 (something else)     (somewhere else)               (something else)
+        620a96700         24 model.Nodo           .elements[32].cabeza.referencia.referencia.referencia.referencia (object)
+        620a96718        504 (something else)     (somewhere else)               (something else)
+        620a96910         24 model.LinkedList     .elements[33]                  (object)
+        620a96928         80 (something else)     (somewhere else)               (something else)
+        620a96978         24 model.Nodo           .elements[33].cabeza           (object)
+        620a96990         96 (something else)     (somewhere else)               (something else)
+        620a969f0         24 model.Nodo           .elements[33].cabeza.referencia (object)
+        620a96a08        144 (something else)     (somewhere else)               (something else)
+        620a96a98         24 model.Nodo           .elements[33].cabeza.referencia.referencia (object)
+        620a96ab0        144 (something else)     (somewhere else)               (something else)
+        620a96b40         24 model.Nodo           .elements[33].cabeza.referencia.referencia.referencia (object)
+        620a96b58        144 (something else)     (somewhere else)               (something else)
+        620a96be8         24 model.Nodo           .elements[33].cabeza.referencia.referencia.referencia.referencia (object)
+        620a96c00        144 (something else)     (somewhere else)               (something else)
+        620a96c90         24 model.Nodo           .elements[33].cabeza.referencia.referencia.referencia.referencia.referencia (object)
+        620a96ca8        648 (something else)     (somewhere else)               (something else)
+        620a96f30         24 model.LinkedList     .elements[34]                  (object)
+        620a96f48         72 (something else)     (somewhere else)               (something else)
+        620a96f90         24 model.Nodo           .elements[34].cabeza           (object)
+        620a96fa8         96 (something else)     (somewhere else)               (something else)
+        620a97008         24 model.Nodo           .elements[34].cabeza.referencia (object)
+        620a97020        144 (something else)     (somewhere else)               (something else)
+        620a970b0         24 model.Nodo           .elements[34].cabeza.referencia.referencia (object)
+        620a970c8        144 (something else)     (somewhere else)               (something else)
+        620a97158         24 model.Nodo           .elements[34].cabeza.referencia.referencia.referencia (object)
+        620a97170        504 (something else)     (somewhere else)               (something else)
+        620a97368         24 model.LinkedList     .elements[35]                  (object)
+        620a97380         72 (something else)     (somewhere else)               (something else)
+        620a973c8         24 model.Nodo           .elements[35].cabeza           (object)
+        620a973e0         96 (something else)     (somewhere else)               (something else)
+        620a97440         24 model.Nodo           .elements[35].cabeza.referencia (object)
+        620a97458        144 (something else)     (somewhere else)               (something else)
+        620a974e8         24 model.Nodo           .elements[35].cabeza.referencia.referencia (object)
+        620a97500        360 (something else)     (somewhere else)               (something else)
+        620a97668        160 [Ljava.lang.Object;  .elements                      [(object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), null, null, null, null, null, null, null, (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object), (object)]
+        620a97708         24 model.LinkedList     .elements[0]                   (object)
+        620a97720         72 (something else)     (somewhere else)               (something else)
+        620a97768         24 model.Nodo           .elements[0].cabeza            (object)
+        620a97780         96 (something else)     (somewhere else)               (something else)
+        620a977e0         24 model.Nodo           .elements[0].cabeza.referencia (object)
+        620a977f8        360 (something else)     (somewhere else)               (something else)
+        620a97960         24 model.LinkedList     .elements[1]                   (object)
+        620a97978         72 (something else)     (somewhere else)               (something else)
+        620a979c0         24 model.Nodo           .elements[1].cabeza            (object)
+        620a979d8         96 (something else)     (somewhere else)               (something else)
+        620a97a38         24 model.Nodo           .elements[1].cabeza.referencia (object)
+        620a97a50        144 (something else)     (somewhere else)               (something else)
+        620a97ae0         24 model.Nodo           .elements[1].cabeza.referencia.referencia (object)
+        620a97af8        360 (something else)     (somewhere else)               (something else)
+        620a97c60         24 model.LinkedList     .elements[2]                   (object)
+        620a97c78         72 (something else)     (somewhere else)               (something else)
+        620a97cc0         24 model.Nodo           .elements[2].cabeza            (object)
+        620a97cd8         96 (something else)     (somewhere else)               (something else)
+        620a97d38         24 model.Nodo           .elements[2].cabeza.referencia (object)
+        620a97d50        144 (something else)     (somewhere else)               (something else)
+        620a97de0         24 model.Nodo           .elements[2].cabeza.referencia.referencia (object)
+        620a97df8        360 (something else)     (somewhere else)               (something else)
+        620a97f60         24 model.LinkedList     .elements[3]                   (object)
+        620a97f78         80 (something else)     (somewhere else)               (something else)
+        620a97fc8         24 model.Nodo           .elements[3].cabeza            (object)
+        620a97fe0         96 (something else)     (somewhere else)               (something else)
+        620a98040         24 model.Nodo           .elements[3].cabeza.referencia (object)
+        620a98058        144 (something else)     (somewhere else)               (something else)
+        620a980e8         24 model.Nodo           .elements[3].cabeza.referencia.referencia (object)
+        620a98100        144 (something else)     (somewhere else)               (something else)
+        620a98190         24 model.Nodo           .elements[3].cabeza.referencia.referencia.referencia (object)
+        620a981a8        144 (something else)     (somewhere else)               (something else)
+        620a98238         24 model.Nodo           .elements[3].cabeza.referencia.referencia.referencia.referencia (object)
+        620a98250        144 (something else)     (somewhere else)               (something else)
+        620a982e0         24 model.Nodo           .elements[3].cabeza.referencia.referencia.referencia.referencia.referencia (object)
+        620a982f8        144 (something else)     (somewhere else)               (something else)
+        620a98388         24 model.Nodo           .elements[3].cabeza.referencia.referencia.referencia.referencia.referencia.referencia (object)
+        620a983a0        648 (something else)     (somewhere else)               (something else)
+        620a98628         24 model.LinkedList     .elements[4]                   (object)
+        620a98640         72 (something else)     (somewhere else)               (something else)
+        620a98688         24 model.Nodo           .elements[4].cabeza            (object)
+        620a986a0         96 (something else)     (somewhere else)               (something else)
+        620a98700         24 model.Nodo           .elements[4].cabeza.referencia (object)
+        620a98718        360 (something else)     (somewhere else)               (something else)
+        620a98880         24 model.LinkedList     .elements[5]                   (object)
+        620a98898         80 (something else)     (somewhere else)               (something else)
+        620a988e8         24 model.Nodo           .elements[5].cabeza            (object)
+        620a98900         96 (something else)     (somewhere else)               (something else)
+        620a98960         24 model.Nodo           .elements[5].cabeza.referencia (object)
+        620a98978        144 (something else)     (somewhere else)               (something else)
+        620a98a08         24 model.Nodo           .elements[5].cabeza.referencia.referencia (object)
+        620a98a20        144 (something else)     (somewhere else)               (something else)
+        620a98ab0         24 model.Nodo           .elements[5].cabeza.referencia.referencia.referencia (object)
+        620a98ac8        144 (something else)     (somewhere else)               (something else)
+        620a98b58         24 model.Nodo           .elements[5].cabeza.referencia.referencia.referencia.referencia (object)
+        620a98b70        504 (something else)     (somewhere else)               (something else)
+        620a98d68         24 model.LinkedList     .elements[6]                   (object)
+        620a98d80         72 (something else)     (somewhere else)               (something else)
+        620a98dc8         24 model.Nodo           .elements[6].cabeza            (object)
+        620a98de0         96 (something else)     (somewhere else)               (something else)
+        620a98e40         24 model.Nodo           .elements[6].cabeza.referencia (object)
+        620a98e58        360 (something else)     (somewhere else)               (something else)
+        620a98fc0         24 model.LinkedList     .elements[7]                   (object)
+        620a98fd8         72 (something else)     (somewhere else)               (something else)
+        620a99020         24 model.Nodo           .elements[7].cabeza            (object)
+        620a99038         96 (something else)     (somewhere else)               (something else)
+        620a99098         24 model.Nodo           .elements[7].cabeza.referencia (object)
+        620a990b0        360 (something else)     (somewhere else)               (something else)
+        620a99218         24 model.LinkedList     .elements[8]                   (object)
+        620a99230         72 (something else)     (somewhere else)               (something else)
+        620a99278         24 model.Nodo           .elements[8].cabeza            (object)
+        620a99290         96 (something else)     (somewhere else)               (something else)
+        620a992f0         24 model.Nodo           .elements[8].cabeza.referencia (object)
+        620a99308        144 (something else)     (somewhere else)               (something else)
+        620a99398         24 model.Nodo           .elements[8].cabeza.referencia.referencia (object)
+        620a993b0        360 (something else)     (somewhere else)               (something else)
+        620a99518         24 model.LinkedList     .elements[9]                   (object)
+        620a99530         72 (something else)     (somewhere else)               (something else)
+        620a99578         24 model.Nodo           .elements[9].cabeza            (object)
+        620a99590         96 (something else)     (somewhere else)               (something else)
+        620a995f0         24 model.Nodo           .elements[9].cabeza.referencia (object)
+        620a99608        360 (something else)     (somewhere else)               (something else)
+        620a99770         24 model.LinkedList     .elements[10]                  (object)
+        620a99788         72 (something else)     (somewhere else)               (something else)
+        620a997d0         24 model.Nodo           .elements[10].cabeza           (object)
+        620a997e8         96 (something else)     (somewhere else)               (something else)
+        620a99848         24 model.Nodo           .elements[10].cabeza.referencia (object)
+        620a99860        144 (something else)     (somewhere else)               (something else)
+        620a998f0         24 model.Nodo           .elements[10].cabeza.referencia.referencia (object)
+        620a99908        360 (something else)     (somewhere else)               (something else)
+        620a99a70         24 model.LinkedList     .elements[11]                  (object)
+        620a99a88         80 (something else)     (somewhere else)               (something else)
+        620a99ad8         24 model.Nodo           .elements[11].cabeza           (object)
+        620a99af0         96 (something else)     (somewhere else)               (something else)
+        620a99b50         24 model.Nodo           .elements[11].cabeza.referencia (object)
+        620a99b68        144 (something else)     (somewhere else)               (something else)
+        620a99bf8         24 model.Nodo           .elements[11].cabeza.referencia.referencia (object)
+        620a99c10        144 (something else)     (somewhere else)               (something else)
+        620a99ca0         24 model.Nodo           .elements[11].cabeza.referencia.referencia.referencia (object)
+        620a99cb8        144 (something else)     (somewhere else)               (something else)
+        620a99d48         24 model.Nodo           .elements[11].cabeza.referencia.referencia.referencia.referencia (object)
+        620a99d60        144 (something else)     (somewhere else)               (something else)
+        620a99df0         24 model.Nodo           .elements[11].cabeza.referencia.referencia.referencia.referencia.referencia (object)
+        620a99e08        144 (something else)     (somewhere else)               (something else)
+        620a99e98         24 model.Nodo           .elements[11].cabeza.referencia.referencia.referencia.referencia.referencia.referencia (object)
+
+Addresses are stable after 1 tries.
+
+
+|====== Tamanio total en memoria ======|
+4032 bytes
+2025-09-10 19:07:17 [main] INFO  performance - 
+ === PROCESO [ Programa ] === 
+ - Uso Memoria Inicio : 19 MB
+ - Consumo CPU Inicio : 0.00 %
+ - Uso Memoria Final : 29 MB
+ - Consumo CPU Final : 15.74 %
+ - Incremento Memoria : 10 MB
+ - Incremento CPU : 15.74 %
+ - Tiempo Ejecucion : 3115 ms
+ - Memoria Disponible JVM : 480 MB
+ - Incremento CPU del Proceso: 79.68 %
+ =============================== 
+
+ - Memoria Física Total: 32654 MB
+ - Memoria Física Usada: 15008 MB
+ - Número de Hilos Activos: 37
+ - Tiempo de CPU Usado por el Proceso: 4452 ms 
+
+
